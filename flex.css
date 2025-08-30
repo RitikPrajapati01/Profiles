@@ -1,0 +1,161 @@
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: lavenderblush;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    align-items: center;
+    margin: 5px auto;
+    
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 50px;
+    
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 600px;
+    border: 2px solid #eee;
+    object-fit: contain;
+    align-items: center;
+    row-gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 5;
+    box-shadow: 1px 1px 3px grey;
+    transition: transform 1ms linear;
+    background-color: #ffffff;
+}
+.profile:hover{
+    transform: scale(1.03);
+}
+.details{
+    /* overflow: scroll; */
+    /* width: 310px;
+    height: 100px; */
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+#sign{
+    width: 100px;
+    height: 70px;
+    object-fit: contain;
+    background-color: transparent;
+}
+#photo{
+    border-radius: 30px
+}
+button{
+    color: white;
+    font-size: larger;
+    background-color: rgb(20, 129, 188);
+    border: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+button:hover {
+  background-color: rgb(15, 100, 150);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+.connect{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#linkedin{
+    font-size: 25px;
+    color: rgb(11, 83, 237);
+}
+#whatsapp{
+    font-size: 25px;
+    color: rgb(73, 238, 73);
+}
+#insta{
+    font-size: 25px;
+    color: rgb(199, 35, 232);
+}
+#snapchat{
+    width: 30px;
+    height: 25px;
+    background-color: yellow;
+    align-items: center;
+    font-size: 25px;
+    padding-left: 5px;
+
+}
+.name{
+    font-variant: small-caps;
+    padding-left: 10px;
+    font-size: 32px;
+    text-shadow: 2px 2px 2px grey;
+}
+
+/* Mobile-first adjustments */
+main {
+  flex-wrap: wrap;
+  row-gap: 20px;
+  padding: 0 10px;
+}
+
+/* Profile card responsiveness */
+.profile {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+
+/* Responsive image sizing */
+#photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Responsive button */
+button {
+  width: 100%;
+  max-width: 120px;
+}
+
+/* Media query for tablets and up */
+@media (min-width: 600px) {
+  main {
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  .profile {
+    flex: 1 1 300px;
+    max-width: 300px;
+  }
+}
+
+/* Media query for desktops */
+@media (min-width: 900px) {
+  main {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  .profile {
+    height: 600px;
+  }
+}
